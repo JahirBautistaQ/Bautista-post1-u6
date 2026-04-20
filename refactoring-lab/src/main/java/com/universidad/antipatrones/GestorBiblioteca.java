@@ -4,7 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-// GOD OBJECT — clase que concentra todas las responsabilidades del sistema
+/*
+ ANALISIS DEL GOD OBJECT
+
+ La clase GestorBiblioteca tiene 4 razones distintas para cambiar:
+
+ 1. Gestion del catalogo de libros
+    - agregarLibro()
+    - buscarLibro()
+    - listarLibrosDisponibles()
+
+ 2. Gestion de socios
+    - registrarSocio()
+    - socioExiste()
+
+ 3. Gestion de prestamos
+    - realizarPrestamo()
+    - devolverLibro()
+
+ 4. Generacion de reportes del sistema
+    - imprimirReporteCompleto()
+
+ Esto viola el principio SRP (Single Responsibility Principle).
+*/
 public class GestorBiblioteca {
 
     // ---- Datos del sistema (3 dominios mezclados) ----
